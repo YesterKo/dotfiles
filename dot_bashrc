@@ -1,0 +1,32 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && EDITOR=nvim && return
+
+alias ls='ls --color=auto'
+PS1='[\u@\h \W]\$ '
+alias battery='cat /sys/class/power_supply/BAT0/capacity'
+export EDITOR=nvim
+alias light='sudo light '
+alias rstiwd='sudo systemctl restart iwd'
+alias laptopmode='xrandr --output DP1 --off --output DP2 --off --output LVDS1 --auto --output HDMI3 --off'
+alias desktopmode='xrandr --output DP1 --auto --output DP2 --auto --left-of DP1 --output LVDS1 --off --output HDMI3 --auto --right-of DP2'
+alias bedmode='xrandr --output DP2 --fb 1700x1200 --panning 1700x1200 --transform 1,0,-100,0,1,0,0,0,1'
+alias cliphoto='xclip -se c -t image/png -out | feh -. -Z -'
+alias dlm='yt-dlp -x -f bestaudio[ext=m4a] --add-metadata --embed-thumbnail'
+# alias fuckloop='while true;do echo -n "FUCK GEO " | pv -qL 10 && sleep 25;done'
+
+fuckloop() {
+while true;do echo -n "$* " | pv -qL 10 && sleep 0.1;done
+
+}
+
+clprint() {
+clear
+tput civis
+echo -ne "$1"
+read
+tput cnorm
+}
