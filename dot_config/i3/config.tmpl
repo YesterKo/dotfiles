@@ -249,7 +249,7 @@ for_window [all] border pixel 2  # workaround for https://github.com/i3/i3/issue
 # finds out, if available)
 bar {
         status_command i3status
-	height 10
+	height {{.i3.barsize}}
 	# mode hide
 }
 
