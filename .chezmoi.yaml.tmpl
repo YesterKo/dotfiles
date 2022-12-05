@@ -1,0 +1,5 @@
+{{ $barsize := promptStringOnce .i3 "barsize" "i3 bar size" "20" }}
+
+data:
+  i3:
+    barsize: {{$barsize | quote }}

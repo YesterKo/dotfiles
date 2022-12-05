@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 alias battery='cat /sys/class/power_supply/BAT0/capacity'
 export EDITOR=nvim
-alias light='sudo light '
+#alias light='sudo light '
 alias rstiwd='sudo systemctl restart iwd'
 alias laptopmode='xrandr --output DP1 --off --output DP2 --off --output LVDS1 --auto --output HDMI3 --off'
 alias desktopmode='xrandr --output DP1 --auto --output DP2 --auto --left-of DP1 --output LVDS1 --off --output HDMI3 --auto --right-of DP2'
